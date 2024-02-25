@@ -5,6 +5,7 @@
 #include <chrono>
 #include <locale>
 #include <string>
+#include <algorithm>
 
 struct originalText{
     std::string originalText;
@@ -38,14 +39,15 @@ void saveOriginalText5(std::string &text, originalText &originalText){
 };
 
 bool foundRus(bool &foundRussian, const std::string &text){
+    return false;
     foundRussian = false;
-
-    if(text.find("а") != std::string::npos ||text.find("б") != std::string::npos ||text.find("в") != std::string::npos ||text.find("г") != std::string::npos ||text.find("д") != std::string::npos ||text.find("е") != std::string::npos ||text.find("е") != std::string::npos ||text.find("ж") != std::string::npos ||text.find("з") != std::string::npos ||text.find("и") != std::string::npos ||text.find("й") != std::string::npos ||text.find("к") != std::string::npos ||text.find("л") != std::string::npos ||text.find("м") != std::string::npos ||text.find("н") != std::string::npos ||text.find("о") != std::string::npos ||text.find("п") != std::string::npos ||text.find("р") != std::string::npos ||text.find("с") != std::string::npos ||text.find("т") != std::string::npos ||text.find("у") != std::string::npos ||text.find("ф") != std::string::npos ||text.find("х") != std::string::npos ||text.find("ц") != std::string::npos ||text.find("ч") != std::string::npos ||text.find("ш") != std::string::npos ||text.find("щ") != std::string::npos ||text.find("ъ") != std::string::npos ||text.find("ы") != std::string::npos ||text.find("ь") != std::string::npos ||text.find("э") != std::string::npos ||text.find("ю") != std::string::npos ||text.find("я") != std::string::npos){
+    
+  if(text.find("а") != std::string::npos ||text.find("б") != std::string::npos ||text.find("в") != std::string::npos ||text.find("г") != std::string::npos ||text.find("д") != std::string::npos ||text.find("е") != std::string::npos ||text.find("е") != std::string::npos ||text.find("ж") != std::string::npos ||text.find("з") != std::string::npos ||text.find("и") != std::string::npos ||text.find("й") != std::string::npos ||text.find("к") != std::string::npos ||text.find("л") != std::string::npos ||text.find("м") != std::string::npos ||text.find("н") != std::string::npos ||text.find("о") != std::string::npos ||text.find("п") != std::string::npos ||text.find("р") != std::string::npos ||text.find("с") != std::string::npos ||text.find("т") != std::string::npos ||text.find("у") != std::string::npos ||text.find("ф") != std::string::npos ||text.find("х") != std::string::npos ||text.find("ц") != std::string::npos ||text.find("ч") != std::string::npos ||text.find("ш") != std::string::npos ||text.find("щ") != std::string::npos ||text.find("ъ") != std::string::npos ||text.find("ы") != std::string::npos ||text.find("ь") != std::string::npos ||text.find("э") != std::string::npos ||text.find("ю") != std::string::npos ||text.find("я") != std::string::npos){
         foundRussian = true;
         return true;
     }    
 
-};
+}
 
 
 
@@ -64,7 +66,7 @@ void theEndEng(originalText &originalText){
         std::this_thread::sleep_for(std::chrono::milliseconds(300));
         std::cout <<"Wait..." <<std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));        
-        
+
         originalText.originalText.append("#### I`m gay also ;)");
         std::cout <<"***************************************"   <<'\n';
         std::cout <<"aaand you has enter it: "<<'\n';
@@ -77,7 +79,7 @@ void theEndEng(originalText &originalText){
         else{
             std::cout <<originalText.originalText2 <<'\n';
         }
-        
+
         std::cout <<"At treen time: " <<'\n';
         if(originalText.originalText3 == ""|| originalText.originalText3 == " "){
             originalText.originalText3 = "Empty";
@@ -86,7 +88,7 @@ void theEndEng(originalText &originalText){
         else{
             std::cout <<originalText.originalText3 <<'\n';
         }
-        
+
         std::cout <<"At 4th: " <<'\n';
         if(originalText.originalText4 == ""|| originalText.originalText4 == " "){
             originalText.originalText4 = "Empty";
@@ -105,6 +107,55 @@ void theEndEng(originalText &originalText){
             std::cout <<originalText.originalText5 <<'\n';
         }
 }
+void theEndRus(originalText &originalText){
+        std::cout <<"Подождите." <<'\n';
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        std::cout <<"Подождите.." <<'\n';
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        std::cout <<"Подождите..." <<std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));        
+
+        originalText.originalText.append("#### I`m gay also ;)");
+        std::cout <<"***************************************"   <<'\n';
+        std::cout <<"Иии ты ввели это: "<<'\n';
+        std:: cout <<originalText.originalText <<'\n'<<'\n';
+        std::cout <<"ТАКЖЕ во второй раз ты ввел это: " <<'\n';
+        if(originalText.originalText2 == ""|| originalText.originalText2 == " "){
+            originalText.originalText2 = "НИЧЕГО";
+            std::cout <<originalText.originalText2 <<'\n';
+        }
+        else{
+            std::cout <<originalText.originalText2 <<'\n';
+        }
+
+        std::cout <<"В третий раз: " <<'\n';
+        if(originalText.originalText3 == ""|| originalText.originalText3 == " "){
+            originalText.originalText3 = "НИЧЕГО";
+            std::cout <<originalText.originalText3 <<'\n';
+        }
+        else{
+            std::cout <<originalText.originalText3 <<'\n';
+        }
+
+        std::cout <<"В четвертый: " <<'\n';
+        if(originalText.originalText4 == ""|| originalText.originalText4 == " "){
+            originalText.originalText4 = "НИЧЕГО";
+            std::cout <<originalText.originalText4 <<'\n';
+        }
+        else{
+            std::cout <<originalText.originalText4 <<'\n';
+        }
+
+        std::cout <<"В пятый:" <<'\n';
+        if(originalText.originalText5 == ""|| originalText.originalText5 == " "){
+            originalText.originalText5 = "НИЧЕГО";
+            std::cout <<originalText.originalText5 <<'\n';
+        }
+        else{
+            std::cout <<originalText.originalText5 <<'\n';
+        }
+}
+
 /*               ПЛАНЫ      ПЛАНЫ       ПЛАНЫ       ПЛАНЫ       ПЛАНЫ
     1. Сделать рандомный ответ на ввыденные, пользователем данные (реализовать рандомайдер с еще большым количеством if-ок)
     2. Увеличит количество ответок (соответственно) сделав еще больше if-ок на еще больше матов(пока-что английских)
@@ -141,35 +192,32 @@ int main(){
        "xrated", "xxx"};
     bool foundRussian = false;
     std::string text;
-    int povtor = 0;
-    char c;
-    char tolow;
-    int dop = 0;
+    int *povtor = NULL;
     int dontMoreOne = 0;
     srand(time(NULL));
     Language(english);
     //// ЗДЕСЬ идет переделывание имени!!!
     originalText saveText;
     /// ЗДЕСЬ идет переделывание имени!!!////
-    
+
 ////                                                                  
 
 
 if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
     std::cout <<"Enter some text here: ";
     std::getline (std::cin, text);
-    
+
     foundRus(foundRussian, text);
     saveOriginalText(text, saveText);
 
     text.erase(std::remove_if(text.begin(), text.end(), ::isspace), text.end());
-    
+
     for (char &tolow : text) {
         tolow = std::tolower(tolow);
     }
-    
+
     do{   
-        if(povtor == 1){
+        if(*povtor == 1){
             std::cout <<"Enter some text, AGAIN(or qq to quit): ";
             std::getline(std::cin, text);
             if(text == "qq"){
@@ -180,14 +228,14 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
             }
             else{
                 saveOriginalText2(text, saveText);
-                text.erase(std::remove_if(text.begin(), text.end(), ::isspace), text.end());
+                    text.erase(std::remove_if(text.begin(), text.end(), ::isspace), text.end());
                 foundRus(foundRussian, text);
                 for(char &tolow : text){
                     tolow = std::tolower(tolow);
                 }
             }
         }                                                    
-        else if(povtor == 2){
+        else if(*povtor == 2){
             std::cout <<"Enter some text, AGAIN(or qq to quit): ";
             std::getline(std::cin, text);
             if(text == "qq"){
@@ -205,7 +253,7 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
                 }
             }
         }
-        else if(povtor == 3){
+        else if(*povtor == 3){
             std::cout <<"Enter some text, AGAIN: ";
             std::getline(std::cin, text);
             if(text == "qq"){
@@ -223,7 +271,7 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
                 }
             }
         }
-        else if(povtor == 4){
+        else if(*povtor == 4){
             std::cout <<"Enter some text, AGAIN: ";
             std::getline(std::cin, text);
             if(text == "qq"){
@@ -249,34 +297,34 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
     else if (text == "dick" || text =="youaredick" || text == "i`mdick"||text =="dic"||text =="dik"|| text =="bick"||text =="fuckername"){
         std::cout <<"Don`t use your real name ;)" <<'\n';
     }
-    
+
     else if(text == "cum" ||text == "cumming" ||text =="cum!"|| text =="cumming!"){
             std::cout <<"I know that it be in your face )))" <<'\n';
     }
-    
+
     else if (text =="fuckyou"||text =="fuckyou!"||text == "fucyou"|| text =="fukyou"||text =="fackyou"||text =="fackyou!"||text == "facyou"||text =="fakyou"){
         std::cout <<"Fuck you too ;)"<<'\n';
     }
-    
+
     else if(text == "4r5e"||text == "5h1t"|| text == "5hit"){
         std::cout <<"You really think that me don`t know it?! HAHA, i know all!" <<'\n';
     }
-    
+
     else if(text =="boolshit"||text == "boolsit!" || text =="doolshit"|| text == "boolchit"||text =="boolcit"){
         std::cout <<"Hey! Dont bool shit here!" <<'\n';
     }    
-    
+
     else if (text =="higger"|| text =="nigger"|| text =="niger" || text == "higer"|| text == "gey"||text == "gay" || text =="slate"){
         int randNum = rand() % 3 + 1;
         switch (randNum){
         case 1 :
             std::cout <<"Don`t use the national of your fathers, please!" <<'\n'; 
         break;
-        
+
         case 2 : 
             std::cout <<"Don`t use names of your fathers" <<'\n';
         break;
-       
+
        case 3 : 
             std::cout <<"Don`t use names of your stepfathers" <<'\n';
         break;
@@ -314,14 +362,16 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
     }
 
 povtor ++;
-}while(povtor < 5);
+}while(*povtor < 5);
+    delete povtor;
+
     theEndEng(saveText);
 }
 ////                                                                    
 else if(english == "R"|| english == "r"|| english == "Р"|| english == "р"){
     std::cout <<"Введите здесь любой текст: ";
     std::getline (std::cin, text);
-    
+
     saveOriginalText(text, saveText);
     text.erase(std::remove_if(text.begin(), text.end(), ::isspace), text.end());
     for (char &c : text) {
@@ -329,22 +379,22 @@ else if(english == "R"|| english == "r"|| english == "Р"|| english == "р"){
     }
 
 do{
-    if(povtor == 1){
+    if(*povtor == 1){
         std::cout <<"Введите что-то ЕЩЕ РАЗ(или 'йй' чтобы выйти): ";
         std::getline(std::cin, text);
         saveOriginalText2(text, saveText);
     }
-    else if(povtor == 2){
+    else if(*povtor == 2){
         std::cout <<"Введите что-то ЕЩЕ РАЗ: ";
         std::getline(std::cin, text);
         saveOriginalText3(text, saveText);
     }
-    else if(povtor == 3){
+    else if(*povtor == 3){
         std::cout <<"Введите что-то ЕЩЕ РАЗ: ";
         std::getline(std::cin, text);
         saveOriginalText4(text, saveText);
     }        
-    else if(povtor == 4){
+    else if(*povtor == 4){
         std::cout <<"Введите что-то ЕЩЕ РАЗ: ";
         std::getline(std::cin, text);
         saveOriginalText5(text, saveText);
@@ -359,14 +409,16 @@ do{
         std::cout <<"Хей ты!! Введи что-то иначе я не разешу тебе ничего писать!";
 
     }
-    
+
     else if(text == "хуй"){
         std::cout <<"Извините, но вы не пишите письмо Деду Морозу. Не стоит загадывать себе член" <<'\n';
     }
 
 povtor ++;
-}while(povtor < 5);
+}while(*povtor < 5);
+delete povtor;
 
+theEndRus(saveText);
 }
 
 else if(english == "#dick" || english == "#intdick"|| english == "intDick"){
@@ -484,7 +536,6 @@ else if(english == "#cat" || english == "#getcat"|| english == "#getCat"){
 }
 
 else{
-    char restard;
     std::string pleaseRestard = "Please restart";
     for (char restard : pleaseRestard) {
         std::cout << restard <<std::flush;
