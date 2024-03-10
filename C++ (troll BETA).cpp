@@ -22,6 +22,7 @@ struct mat{
 std::string english;
 
 
+//! saveOriginalText
 void saveOriginalText(std::string &text, originalText &originalText) {
     originalText.originalText = text;
 };
@@ -48,18 +49,42 @@ bool foundRus(bool &foundRussian, const std::string &text){
     }    
 
 }
-
-
-
 void Language(std::string &english){
     std::cout <<"************************************************" <<'\n';
     std::cout <<"Enter language(Выберите язык): "<<'\n';
     std::cout <<"E(е) - english(английский)" <<'\n';
     std::cout <<"R(р) - russian(русский)" <<'\n';
-    std::getline(std::cin, english);
+    std::cin >>english ;
 }
+//! swears ENG
+bool theDick(std::string text){
+    if(text == "dick"|| text == "youdick"|| text == "youaredick"|| text == "i`mdick" || text == "dik"|| text == "dic"|| text =="dikc"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+bool theCum(std::string text){
+    if(text == "cum" || text == "cumming"|| text == "cuming"|| text == "cumink" || text == "kumming"|| text == "kuming" || text == "kumink"|| text == "cum!"|| text == "cumming!"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+bool theFuckyou(std::string text){
+    if(text == "fuckyou"|| text == "i`mfuckyou"|| text == "ifuckyou" || text == "mefuckyou"|| text == "ifucku"|| text == "i124q"|| text == "fuckyou!"|| text == "i`mfuckyou!" || text == "ifuckyou!"|| text == "mefuckyou!"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+//!swears RUS
 
-void theEndEng(originalText &originalText){
+//! theEnd
+bool theEndEng(originalText &originalText){
         std::cout <<"Wait." <<'\n';
         std::this_thread::sleep_for(std::chrono::milliseconds(300));
         std::cout <<"Wait.." <<'\n';
@@ -106,6 +131,7 @@ void theEndEng(originalText &originalText){
         else{
             std::cout <<originalText.originalText5 <<'\n';
         }
+return true;
 }
 void theEndRus(originalText &originalText){
         std::cout <<"Подождите." <<'\n';
@@ -156,18 +182,16 @@ void theEndRus(originalText &originalText){
         }
 }
 
-/*               ПЛАНЫ      ПЛАНЫ       ПЛАНЫ       ПЛАНЫ       ПЛАНЫ
+/*
+!                          ПЛАНЫ      ПЛАНЫ       ПЛАНЫ       ПЛАНЫ       ПЛАНЫ
     1. Сделать рандомный ответ на ввыденные, пользователем данные (реализовать рандомайдер с еще большым количеством if-ок)
     2. Увеличит количество ответок (соответственно) сделав еще больше if-ок на еще больше матов(пока-что английских)
-
-    4. Создать void сравнения которая будет проверять то, что введет пользователь, а потом будет придавать значение true/false => нужно будет создать еще 1 void которая будет сравнивать true ли значение 🐶
-    *или создать структуру которая будет хранить массивы и в итоге в ~if должен сравниваться массив в структуре 
-
-    7. Вернуть нахождение русских букв на "нахождение каждой буквы отдельно", но на этот раз запихнуть ее в void
-    8. Попробовать создать имитацию введения символов в реальном времени
-    9. Оптимизировать код под структуру ~originalText (нужно хорошо постараться чтобы оптимизировать код под новые стандарты)
-    10. Попробовать вместить сюда ~class путем того, что будет провераться наличие матов используя void в class и как-то нужно использовать те, что находятся в swear[] по новому, а что уже есть оставить
-    11. ....
+    3. Создать структуру в которой будут void-ы которые будут сравнивать наличие мата и возврящать true/false значения
+    4. Вернуть нахождение русских букв на "нахождение каждой буквы отдельно", но на этот раз запихнуть ее в void
+    5. Попробовать создать имитацию введения символов в реальном времени
+    6. Оптимизировать код под структуру ~originalText (нужно хорошо постараться чтобы оптимизировать код под новые стандарты)
+    7. Попробовать вместить сюда ~class путем того, что будет провераться наличие матов используя void в class и как-то нужно использовать те, что находятся в swear[] по новому, а что уже есть оставить
+    8. ....
     *.Исправить лишние баги(конечно создав новые)
 
 */
@@ -193,16 +217,16 @@ int main(){
     bool foundRussian = false;
     std::string text;
     int *povtor = NULL;
-    int dontMoreOne = 0;
+    int *dontMoreOne = 0;
     srand(time(NULL));
     Language(english);
     //// ЗДЕСЬ идет переделывание имени!!!
     originalText saveText;
     /// ЗДЕСЬ идет переделывание имени!!!////
 
-////                                                                  
 
 
+// ! if(E)                                                                  
 if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
     std::cout <<"Enter some text here: ";
     std::getline (std::cin, text);
@@ -294,15 +318,15 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
         std::cout <<"Hey you! Enter something or i has been fuck you and your mother!!!1" <<'\n';
     }
 
-    else if (text == "dick" || text =="youaredick" || text == "i`mdick"||text =="dic"||text =="dik"|| text =="bick"||text =="fuckername"){
+    else if (theDick(text)){
         std::cout <<"Don`t use your real name ;)" <<'\n';
     }
 
-    else if(text == "cum" ||text == "cumming" ||text =="cum!"|| text =="cumming!"){
+    else if(theCum(text)){
             std::cout <<"I know that it be in your face )))" <<'\n';
     }
 
-    else if (text =="fuckyou"||text =="fuckyou!"||text == "fucyou"|| text =="fukyou"||text =="fackyou"||text =="fackyou!"||text == "facyou"||text =="fakyou"){
+    else if (theFuckyou(text)){
         std::cout <<"Fuck you too ;)"<<'\n';
     }
 
@@ -337,7 +361,7 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
         std::cout <<"HAHAHA! I don`t give you secret! Fuck off!" <<'\n';
     }
     else if(text == "i`mgood"|| text == "iamgood" || text == "megood"|| text == "good" || text == "cool"|| text == "imgood"){
-        if(dontMoreOne < 1){
+        if(*dontMoreOne < 1){
             std::cout <<"Nice! and don`t text this anymore. I`m really!!!\n";
             dontMoreOne += 1;
         }
@@ -345,7 +369,7 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
             std::cout <<"Hey!! I has say: Do not enter it anymore!!" <<'\n';
             for(int z = 0; z < 50; z++){
                 std::cout <<"Fuck you!!" <<std::flush <<'\n';
-            std::this_thread::sleep_for(std::chrono::milliseconds(500));            
+                std::this_thread::sleep_for(std::chrono::milliseconds(500));            
             }
             return 0;
             break;
@@ -364,10 +388,11 @@ if(english == "E"|| english == "e"|| english =="Е"|| english == "е"){
 povtor ++;
 }while(*povtor < 5);
     delete povtor;
+    delete dontMoreOne;
 
     theEndEng(saveText);
 }
-////                                                                    
+// ! if(R)                                                                 
 else if(english == "R"|| english == "r"|| english == "Р"|| english == "р"){
     std::cout <<"Введите здесь любой текст: ";
     std::getline (std::cin, text);
@@ -401,7 +426,7 @@ do{
     }
 
     if(text == ""){
-        if( dontMoreOne > 1){
+        if( *dontMoreOne > 1){
             std::cout <<"Я же говорил НАПИШИ ХОТЬ ЧТО-ТО!! Но нет! нужно же меня разозлить! Знаешь, а пошел ты!";
             break;
             return 0;
@@ -420,7 +445,7 @@ delete povtor;
 
 theEndRus(saveText);
 }
-
+// ! Пасхалки
 else if(english == "#dick" || english == "#intdick"|| english == "intDick"){
     for(int dick = 0; dick < 10; dick++){
         std::cout <<"ර ̶͞ ̶͞ ̶͞ධ" <<'\n';
@@ -534,7 +559,60 @@ else if(english == "#cat" || english == "#getcat"|| english == "#getCat"){
 
     return 0;
 }
-
+else if(english == "#fingers"|| english == "#finger"){
+    std::cout <<"________________$$$$_________$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"________________$$$$$________$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_________________$$$$$_______$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"___________$$$____$$$$$______$$$$$" <<'\n' ;
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"___________$$$$____$$$$$_____$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"___________$$$$$____$$$$$____$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"____________$$$$$____$$$$$___$$$$$$___________$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_____________$$$$$___$$$$$$__$$$$$$_________$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_____________$$$$$$___$$$$$$_$$$$$$________$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"___$$$$_______$$$$$$__$$$$$$__$$$$$$_______$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"____$$$$_______$$$$$$__$$$$$$$$$$$$$_______$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_____$$$$$______$$$$$$$$$$$$$$$$$$$$$_____$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_______$$$$$_____$$$$$$$$$$$$$$$$$$$$$____$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"________$$$$$$$___$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"__________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"____________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"______________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_______________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"________________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_________________$$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"__________________$$$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"___________________$$$$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"_____________________$$$$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"______________________$$$$$$$$$$$$$$$$$$$" <<'\n';
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout <<"________________________$$$$$$$$$$$$$$" <<'\n';
+}
+else if(english == "#somethink"|| english =="#some"){
+    std::cout <<"This is somethink text here" <<'\n';
+}
 else{
     std::string pleaseRestard = "Please restart";
     for (char restard : pleaseRestard) {
