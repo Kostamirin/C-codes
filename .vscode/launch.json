@@ -1,27 +1,27 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Base Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/home/kleymuner2131/Документы/Works/compiled/compile",
+      "args": [],
+      "stopAtEntry": true,  // Программа остановится на первой строке
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
         {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "E:/Works/Compiled_Files/compiled.exe", // имя конечного файла компиляции (именно он должен запуститься)
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "E:/Works/Compiled_Files",
-            "environment": [],
-            "externalConsole": true,
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "build",
-            "internalConsoleOptions": "openOnSessionStart"
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         }
-    ]
+      ],
+      "preLaunchTask": "build active file", // Сначала компиляция
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
 }

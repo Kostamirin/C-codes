@@ -16,7 +16,7 @@ public:
         // Обращение к вектору выше с присваиванием локальных имен, которые будут использоваться
         for(auto &[number, symbol] : values){
             while(num >= number){
-                answer += number;
+                answer += symbol;
                 num -= number;
             }
         }
