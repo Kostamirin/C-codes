@@ -1,0 +1,3 @@
+/home/kleymuner2131/Документы/Works/C-codes/cmake-build-debug/CMakeFiles/C-codes.dir
+/home/kleymuner2131/Документы/Works/C-codes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kleymuner2131/Документы/Works/C-codes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
