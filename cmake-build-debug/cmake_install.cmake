@@ -1,4 +1,4 @@
-# Install script for directory: /home/kleymuner2131/Документы/Works/C-codes
+# Install script for directory: /home/kleymuner2131/CLionProjects/C-codes
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/kleymuner2131/Документы/Works/C-codes/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/kleymuner2131/CLionProjects/C-codes/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -14,6 +14,15 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+C-codes_BINARY_DIR:STATIC=/home/kleymuner2131/CLionProjects/C-codes/cmake-build-debug
+
+//Value Computed by CMake
+C-codes_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+C-codes_SOURCE_DIR:STATIC=/home/kleymuner2131/CLionProjects/C-codes
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -148,7 +157,22 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=C_codes
+CMAKE_PROJECT_NAME:STATIC=C-codes
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=1.0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -223,6 +247,15 @@ C_codes_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 C_codes_SOURCE_DIR:STATIC=/home/kleymuner2131/CLionProjects/C-codes
+
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=/home/kleymuner2131/CLionProjects/C-codes/cmake-build-debug
+
+//Value Computed by CMake
+Project_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=/home/kleymuner2131/CLionProjects/C-codes
 
 
 ########################
