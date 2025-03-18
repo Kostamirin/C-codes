@@ -1,4 +1,13 @@
-/home/kleymuner2131/other/clion-2024.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/kleymuner2131/other/clion-2024.3/bin/ninja/linux/x64/ninja -G Ninja -S /home/kleymuner2131/Документы/Works/C-codes -B /home/kleymuner2131/Документы/Works/C-codes/cmake-build-debug
--- Configuring done (0.1s)
--- Generating done (0.0s)
--- Build files have been written to: /home/kleymuner2131/Документы/Works/C-codes/cmake-build-debug
+/home/kleymuner2131/other/clion-2024.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/kleymuner2131/other/clion-2024.3/bin/ninja/linux/x64/ninja -G Ninja -S /home/kleymuner2131/CLionProjects/C-codes -B /home/kleymuner2131/CLionProjects/C-codes/cmake-build-debug
+-- Configuring done (0.0s)
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    C++ (personal_works)/Calcularot Versions/C++ (calculator).cpp
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: C_codes
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
