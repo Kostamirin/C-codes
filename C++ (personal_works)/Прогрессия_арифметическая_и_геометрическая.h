@@ -69,6 +69,17 @@ public:
         {
             std::cout << "Требуется больше данных для вычислений.\n";
         }
+        // Case 3: Find d if a_n and a_1 are known
+        else if (termValue != -1 && firstTerm != -1 && termNumber != -1 && step == -1)
+        {
+            step = (termValue - firstTerm) / (termNumber - 1);
+            std::cout << "Calculated step of progression (d): " << step << "\n";
+        }
+        // Case 4: Calculate a_n and/or S_n if n, a_1 and d are known
+        else if (termValue == -1 && termNumber != -1 && firstTerm != -1 && step != -1)
+        {
+            termValue = firstTerm + (termNumber - 1) * step;
+            std::cout << "Value of " << termNumber << "-th term (a_" << termNumber << "): " << termValue << "\n";
 
         std::cout << "\nВозвращаемся в меню...\n";
         menu();
