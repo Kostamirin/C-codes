@@ -28,17 +28,18 @@ public:
             break;
         case 2:
             std::cout << "Geometric progression is not implemented yet.\n";
+            menu();
             break;
         case 3:
             instructions();
             break;
         case 4:
             exit(0);
-            break;
+            //break;
         default:
             std::cout << "Error: Invalid choice.\n";
             exit(0);
-            break;
+            //break;
         }
     }
     void arithmeticProgression()
@@ -110,7 +111,7 @@ public:
         }
 
         std::cout << "\nReturning to menu...\n";
-        menu();
+        arithmeticProgression();
     }
 
     void instructions()
