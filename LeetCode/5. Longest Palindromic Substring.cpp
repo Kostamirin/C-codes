@@ -6,26 +6,41 @@ using namespace std;
 class Solution {
 public:
     string longestPalindrome(string s) {
-        if (s.size() == 1){return s;}
-        string result = " ";
+       string result = " ";
+        if (s.size() == 1)
+        {
+            return s;
+        }
 
         for (int i = 0; i < s.size(); i++)
         {
-            for (int j = i + 1; j <= s.size(); j++)
+            int left = i;
+            int right = i;
+            while (left >= 0 && right < s.size() && s[left] == s[right])
             {
-                string side_string = s.substr(i, j - i);
-                if (side_string == string(side_string.rbegin(), side_string.rend()))
+                if (right - left + 1 > result.size())
                 {
-                    if (side_string.size() > result.size())
-                    {
-                        result = side_string;
-                    }
+                    result = s.substr(left, right - left + 1);
                 }
+                left--;
+                right++;
+            }
+            left = i;
+            right = i + 1;
+            while (left >= 0 && right < s.size() && s[left] == s[right])
+            {
+                if (right - left + 1 > result.size())
+                {
+                    result = s.substr(left, right - left + 1);
+                }
+                left--;
+                right++;
             }
         }
+
         if (result == " ")
         {
-            return s.substr(0, 1);
+            return s.substr(0,1);
         }
 
         return result;
