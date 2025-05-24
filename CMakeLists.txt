@@ -16,6 +16,7 @@ find_package(Qt6 COMPONENTS
 add_executable(
         C-codes
         "LeetCode/5. Longest Palindromic Substring.cpp"
+        "LeetCode/2942. Find Words Containing Character .cpp"
 
 )
 target_link_libraries(C-codes
