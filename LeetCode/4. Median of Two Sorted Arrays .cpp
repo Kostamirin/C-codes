@@ -39,17 +39,16 @@ public:
         //sorting(nums1, nums1.size());
         std::sort(nums1.begin(), nums1.end());
 
-        std::vector<int> numbers = sorting(nums1, nums1.size());
 
         if(size % 2 == 0){
-            double median1 = numbers[size / 2 -1];
-            double median2 = numbers[size / 2];
-            double something  = (median1 + median2) / 2;
-            return something;
+            double median1 = nums1[size / 2 -1];
+            double median2 = nums1[size / 2];
+            double result  = (median1 + median2) / 2;
+            return result;
         }
         else{
-            double something = numbers[size / 2];
-            return something;
+            double result = nums1[size / 2];
+            return result;
         }
     }
 };
