@@ -120,4 +120,3 @@ int main()
     long long answer = solution.distributeCandies(n, limit);
     std::cout << answer << std::endl;
     return 0;
-}
