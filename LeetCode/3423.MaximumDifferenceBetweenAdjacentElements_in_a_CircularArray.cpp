@@ -8,21 +8,13 @@ using namespace std;
 class Solution {
 public:
     int maxAdjacentDistance(vector<int>& nums) {
-        int max = nums[0];
-        int min = nums[0];
+        int n = nums.size();
+        int answer = abs(nums[0] - nums[n-1]);
 
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < n-1; i++)
         {
-            if (nums[i] > max)
-            {
-                max = nums[i];
-            }
-            if (nums[i] < min)
-            {
-                min = nums[i];
-            }
+            answer = max(answer, abs(nums[i] - nums[i-1]));
         }
-        int answer = sqrt((max - min) * (max - min));
         return answer;
     }
 };
