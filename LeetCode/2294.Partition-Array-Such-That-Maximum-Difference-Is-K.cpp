@@ -9,16 +9,17 @@ public:
     int partitionArray(vector<int>& nums, int k) {
         std::sort(nums.begin(), nums.end());
         int answer = 0;
-        vector<int> first = {nums[0], nums[1]};
 
         int pointer = 0;
         for (int i = 0; i <= nums.size() - 1; i = pointer)
         {
-            int min = nums[i], max = NULL;
-            int j = i + 1;
-            while (max - min <= k && j <= nums.size() - 1)
+            int j = i;
+            while (nums[j] - nums[i] <= k && j <= nums.size() - 1)
             {
-                max = nums[j];
+                if (j == nums.size() - 1)
+                {
+                    return answer + 1;
+                }
                 j++;
             }
             pointer = j;
@@ -34,11 +35,11 @@ int main()
 {
     Solution solution;
     vector<int> nums_1 = {3,6,1,2,5};
-    int k_1 = 3;
+    int k_1 = 2;
     vector<int> nums_2 = {1,2,3};
-    int k_2 = 2;
+    int k_2 = 1;
     vector<int> nums_3 = {2,2,4,5};
-    int k_3 = 3;
+    int k_3 = 0;
     std::cout <<endl;
 
     int answer_1 = solution.partitionArray(nums_1, k_1);
